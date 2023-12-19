@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  form(action="/api/sum", method="post")
+    input(type="text", name="a", placeholder="Enter a number", value="#{a ||''}")
+    input(type="text", name="b", placeholder="Enter another number", value="#{b || ''}")
+    button(type="submit") Calculate
+  p Result: #{sum}
